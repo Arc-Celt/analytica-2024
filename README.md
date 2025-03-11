@@ -1,5 +1,7 @@
 # 2024 Data Analyst Jobs in Canada Dashboard
 
+![Preview](img/dashboard-preview.png)
+
 ## Motivation
 
 **Target audience**: Data job seekers and data enthusiasts
@@ -11,8 +13,6 @@ That's why I developed this dashboard. It provides insights into the Canadian da
 The goal is to help job seekers gain a better understanding of the landscape they are stepping into, allowing them to focus their efforts on roles that align with their skills and aspirations. By learning from the past, users can make more strategic decisions and prepare themselves better for the competitive job market.
 
 ## App Description
-
-[Video Walkthrough to be added]
 
 The 2024 Data Analyst Jobs in Canada Dashboard allows users to:
 
@@ -30,7 +30,11 @@ The 2024 Data Analyst Jobs in Canada Dashboard allows users to:
    cd DSCI_532_individual-assignment_celt313
    ```
 
-2. Make sure you have installed the required R packages: shiny, bslib, ggplot2, tidyverse, plotly, sf, DT.
+2. Install dependencies using renv:
+
+   ```bash
+   Rscript -e 'renv::restore()'
+   ```
 
 3. Run the app locally:
 
@@ -38,11 +42,7 @@ The 2024 Data Analyst Jobs in Canada Dashboard allows users to:
    Rscript app.R
    ```
 
-4. Access the dashboard by opening the URL in your browser:
-
-   ```bash
-   http://localhost:8050
-   ```
+4. Access the dashboard by opening the URL shown in the console output.
 
 ## License
 
