@@ -41,7 +41,7 @@ ui <- page_fluid(
           ),
           a(
             class = "btn btn-outline-light btn-sm",
-            href = "https://github.ubc.ca/mds-2024-25/DSCI_532_individual-assignment_celt313",
+            href = "https://github.com/Arc-Celt/data-analyst-jobs-dashboard",
             target = "_blank",
             style = "margin-right: 5px;",
             tags$i(class = "fab fa-github", style = "margin-right: 5px;"),
