@@ -8,8 +8,8 @@ library(DT)
 library(fontawesome)
 
 job_data <- read_csv("data/processed/processed_data.csv")
-source("src/ui.R")
-source("src/server.R")
+source("src/ui.R", local = environment())
+source("src/server.R", local = environment())
 
 # Run the dashboard
 shinyApp(ui, server)
