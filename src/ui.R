@@ -65,7 +65,7 @@ ui <- page_fluid(
         ),
         div(style = "margin-bottom: 10px;",
           selectizeInput("position", "Position",
-            choices = c("All", unique(data$Position)),
+            choices = c("All", unique(job_data$Position)),
             selected = "All",
             multiple = TRUE,
             options = list(plugins = list("remove_button"))
@@ -73,7 +73,7 @@ ui <- page_fluid(
         ),
         div(style = "margin-bottom: 10px;",
           selectizeInput("province", "Province",
-            choices = c("All", sort(unique(data$Province))),
+            choices = c("All", sort(unique(job_data$Province))),
             selected = "All",
             multiple = TRUE,
             options = list(plugins = list("remove_button"))
@@ -81,8 +81,8 @@ ui <- page_fluid(
         ),
         div(style = "margin-bottom: 10px;",
           selectizeInput("work_type", "Work Type",
-            choices = unique(data$Work_Type),
-            selected = unique(data$Work_Type),
+            choices = unique(job_data$Work_Type),
+            selected = unique(job_data$Work_Type),
             multiple = TRUE,
             options = list(plugins = list("remove_button"))
           )
@@ -95,7 +95,7 @@ ui <- page_fluid(
         ),
         div(style = "margin-bottom: 10px;",
           selectizeInput("industry", "Industry Type",
-            choices = c("All", unique(data$Industry_Type)),
+            choices = c("All", unique(job_data$Industry_Type)),
             selected = "All",
             multiple = TRUE,
             options = list(plugins = list("remove_button"))
@@ -103,11 +103,11 @@ ui <- page_fluid(
         ),
         div(style = "margin-bottom: 5px;",
           sliderInput("salary", "Average Salary Range",
-            min = min(data$Avg_Salary, na.rm = TRUE),
-            max = max(data$Avg_Salary, na.rm = TRUE),
+            min = min(job_data$Avg_Salary, na.rm = TRUE),
+            max = max(job_data$Avg_Salary, na.rm = TRUE),
             value = c(
-              min(data$Avg_Salary, na.rm = TRUE),
-              max(data$Avg_Salary, na.rm = TRUE)
+              min(job_data$Avg_Salary, na.rm = TRUE),
+              max(job_data$Avg_Salary, na.rm = TRUE)
             )
           )
         )

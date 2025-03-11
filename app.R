@@ -5,8 +5,9 @@ library(tidyverse)
 library(plotly)
 library(sf)
 library(DT)
+library(fontawesome)
 
-data <- read_csv("data/processed/processed_data.csv")
+job_data <- read_csv("data/processed/processed_data.csv")
 source("src/ui.R")
 source("src/server.R")
 

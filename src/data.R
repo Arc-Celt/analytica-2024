@@ -3,10 +3,10 @@ library(lubridate)
 library(stringr)
 
 # Load the data
-data <- read_csv("data/raw/Cleaned_Dataset.csv")
+job_data <- read_csv("data/raw/Cleaned_Dataset.csv")
 
 # Clean column names by replacing spaces with underscores
-colnames(data) <- str_replace_all(colnames(data), " ", "_")
+colnames(job_data) <- str_replace_all(colnames(job_data), " ", "_")
 
 # Function to clean city names
 clean_city <- function(city) {
@@ -46,11 +46,11 @@ clean_province <- function(province) {
 }
 
 # Apply the cleaning functions
-data$City <- sapply(data$City, clean_city)
-data$Province <- sapply(data$Province, clean_province)
+job_data$City <- sapply(job_data$City, clean_city)
+job_data$Province <- sapply(job_data$Province, clean_province)
 
 # Combine City and Province into a single Location column
-data <- data |>
+job_data <- job_data |>
   mutate(
     Location = case_when(
       str_detect(City, "^Remote") & Province != "Remote"
@@ -62,7 +62,7 @@ data <- data |>
   )
 
 # Clean and transform the 'Skill' column
-data <- data |>
+job_data <- job_data |>
   mutate(
     Skill = str_to_upper(Skill),
     Skill = ifelse(Skill == "UNDEF", "No Specification", Skill)
@@ -73,4 +73,4 @@ data <- data |>
   )
 
 # Save the cleaned data
-write_csv(data, "data/processed/processed_data.csv")
+write_csv(job_data, "data/processed/processed_data.csv")

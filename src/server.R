@@ -34,14 +34,14 @@ server <- function(input, output, session) {
     {
       ensure_non_empty(
         session, "work_type", 
-        input$work_type, unique(data$Work_Type)[1]
+        input$work_type, unique(job_data$Work_Type)[1]
       )
     },
     ignoreNULL = FALSE
   )
 
   filtered_data <- reactive({
-    data |>
+    job_data |>
       filter(
         (input$position == "All" | Position %in% input$position),
         (input$province == "All" | Province %in% input$province),
