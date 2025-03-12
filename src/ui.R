@@ -18,7 +18,7 @@ ui <- page_fluid(
         h1(
           HTML('<i class="fas fa-chart-bar" style="margin-right: 10px;"></i> 2024 Data Analyst Jobs In Canada'),
           style = "font-size: 30px; font-weight: bold;
-          margin-bottom: 5px; margin-left: 25px; padding-top: 5px"
+          margin-bottom: 5px; margin-left: 25px; padding-top: 10px"
         ),
         p(
           "🚀 We'll all land a satisfying job eventually. Keep calm and carry on!",
@@ -41,7 +41,7 @@ ui <- page_fluid(
           ),
           a(
             class = "btn btn-outline-light btn-sm",
-            href = "https://github.com/Arc-Celt/data-analyst-jobs-dashboard",
+            href = "https://github.ubc.ca/mds-2024-25/DSCI_532_individual-assignment_celt313",
             target = "_blank",
             style = "margin-right: 5px;",
             tags$i(class = "fab fa-github", style = "margin-right: 5px;"),
@@ -101,14 +101,19 @@ ui <- page_fluid(
             options = list(plugins = list("remove_button"))
           )
         ),
-        div(style = "margin-bottom: 5px;",
+        div(
+          style = "margin-bottom: 5px;",
           sliderInput("salary", "Average Salary Range",
-            min = min(job_data$Avg_Salary, na.rm = TRUE),
-            max = max(job_data$Avg_Salary, na.rm = TRUE),
+            min = round(min(job_data$Avg_Salary, na.rm = TRUE), -4),
+            max = round(max(job_data$Avg_Salary, na.rm = TRUE) + 5000, -4),
             value = c(
-              min(job_data$Avg_Salary, na.rm = TRUE),
-              max(job_data$Avg_Salary, na.rm = TRUE)
-            )
+              round(min(job_data$Avg_Salary, na.rm = TRUE), -4),
+              round(max(job_data$Avg_Salary, na.rm = TRUE) + 5000, -4)
+            ),
+            step = 1000,
+            pre = "$",
+            sep = ",",
+            animate = FALSE
           )
         )
       )
