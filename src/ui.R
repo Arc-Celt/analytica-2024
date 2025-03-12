@@ -6,7 +6,8 @@ library(fontawesome)
 ui <- page_fluid(
   theme = bs_theme(),
   tags$head(
-    # Stylesheet for icons
+    tags$title("Data Analyst Jobs In Canada"),
+    tags$link(rel = "icon", type = "image/x-icon", href = "favicon.ico"),
     tags$link(rel = "stylesheet", href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
   ),
   div(
@@ -175,7 +176,7 @@ ui <- page_fluid(
     p(
       HTML('Developed by Archer Liu | 
       <a href="https://www.kaggle.com/datasets/amanbhattarai695/data-analyst-job-roles-in-canada/data" target="_blank">Data source</a> 
-      | Last updated: March 10, 2025'),
+      | <a href="https://www.flaticon.com/free-icons/data" title="data icons">Icon created by Flaticon</a> | Last updated: March 11, 2025'),
     )
   )
 )
