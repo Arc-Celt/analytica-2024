@@ -6,7 +6,7 @@ library(fontawesome)
 ui <- page_fluid(
   theme = bs_theme(),
   tags$head(
-    tags$title("Data Analyst Jobs In Canada"),
+    tags$title("Analytica 2024"),
     tags$link(rel = "icon", type = "image/x-icon", href = "favicon.ico"),
     tags$link(rel = "stylesheet", href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css")
   ),
@@ -17,7 +17,7 @@ ui <- page_fluid(
       column(
         width = 8,
         h1(
-          HTML('<i class="fas fa-chart-bar" style="margin-right: 10px;"></i> 2024 Data Analyst Jobs In Canada'),
+          HTML('<i class="fas fa-chart-bar" style="margin-right: 10px;"></i> Analytica 2024: Insights into the Canadian Data Analyst Job Market'),
           style = "font-size: 30px; font-weight: bold;
           margin-bottom: 5px; margin-left: 25px; padding-top: 10px"
         ),
