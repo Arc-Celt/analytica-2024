@@ -26,8 +26,8 @@ The 2024 Data Analyst Jobs in Canada Dashboard allows users to:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.ubc.ca/mds-2024-25/DSCI_532_individual-assignment_celt313.git
-   cd DSCI_532_individual-assignment_celt313
+   git clone https://github.com/Arc-Celt/analytica-2024.git
+   cd analytica-2024
    ```
 
 2. Install dependencies using renv:
@@ -46,4 +46,4 @@ The 2024 Data Analyst Jobs in Canada Dashboard allows users to:
 
 ## License
 
-This project was created by Archer Liu. It is licensed under the terms of the [MIT](https://github.ubc.ca/mds-2024-25/DSCI_532_individual-assignment_celt313/blob/master/LICENSE.md) license.
+This project was created by Archer Liu. It is licensed under the terms of the [MIT](https://github.com/Arc-Celt/analytica-2024/blob/main/LICENSE.md) license.
