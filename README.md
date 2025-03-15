@@ -1,4 +1,4 @@
-# 2024 Data Analyst Jobs in Canada Dashboard
+# Analytica 2024: Insights into the Canadian Data Analyst Job Market
 
 ![Preview](img/dashboard-preview.png)
 
